@@ -5,18 +5,20 @@ class Forma {
   }
 
   display() {
-    noFill();
-    stroke(100);
     strokeWeight(115);
-    ellipse(width/2, this.y, this.diametro + 20, this.diametro);
+    strokeCap(SQUARE);
+  
+    if (this.y < height/2) {
+      stroke(50);
+      line(10, this.y + 30, width - 10, this.y + 30); // Linea de Arriba
+    } else {
+      stroke(50);
+      line(10, this.y - 20, width - 10, this.y - 20); // Linea de Abajo
+    }
 
-    line(70, this.y + 30, width - 70, this.y + 30);
-    line(70, height - 30, width - 70, height - 30);
-
-    stroke(0);
-    line(57, 0, 57, width);
-    stroke(205);
-    line(height  - 57, 0, height - 57, width);
+    stroke(100);
+    noFill();
+    ellipse(width/2, this.y, this.diametro, this.diametro);
   }
 }
 
@@ -33,6 +35,13 @@ function setup() {
 
 function draw() {
   background(200);
+  semicirculo[0].display();
+  dibujarLineasLaterales();
+  semicirculo[1].display();
+}
 
-  semicirculo.forEach(semicirculo => semicirculo.display());
+function dibujarLineasLaterales() {
+  stroke(25);
+  line(57, 0, 57, width);
+  line(height - 57, 0, height - 57, width);
 }
