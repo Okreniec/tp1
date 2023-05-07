@@ -2,59 +2,91 @@ function rectangulo(posicion) { //Rectangulos terminados
   strokeWeight(width/8.7); //anchura de las líneas
   strokeCap(SQUARE); //puntas de las líneas (cuadradas)
 
-  if (posicion === 'arribaIzq') {
-    stroke(colorCirculo);
-    line(width - width * 0.99, 0 + height * 0.03, width / 2, 0 + height * 0.03);
+  if (posicion === 'arribaIzq') { //listo
+    noStroke();
+    fill(60);
+    quad(0, 0,
+    width / 2, 0,
+    width / 2, height / 11.4,
+    width / 8.8, height / 11.4);
 
-  }  else if (posicion === 'arribaDer'){
-    stroke(50);
-    line(width / 2.01, 0 + height * 0.03, width - 7, 0 + height * 0.03);
+  }  else if (posicion === 'arribaDer'){ //listo
+    noStroke();
+    fill(60);
+    quad(width / 2.01, 0,
+    width, 0,
+    width - width / 8.8, height / 11.4,
+    width / 2.01, height / 11.4);
 
-  } else if (posicion === 'abajoIzq') { 
-    stroke(50);
-    line(width - width * 0.99, height - height * 0.02, width / 2, height - height * 0.02);
+  } else if (posicion === 'abajoIzq') { //listo
+    noStroke();
+    fill(40);
+    quad(width / 8.8, height - height / 11.4,
+    width / 2, height - height / 11.4,
+    width / 2, height,
+    0, height);
 
-  } else if (posicion === 'abajoDer') {
-    stroke(colorCirculo);
-    line(width / 2.01, height - height * 0.02, width, height - height * 0.02);
+  } else if (posicion === 'abajoDer') { //listo
+    noStroke();
+    fill(40);
+    quad(width / 2.01, height - height / 11.4,
+    width - width / 8.8, height - height / 11.4,
+    width, height,
+    width / 2.01, height);
 
-  } else if (posicion === 'derechaSup') {
-    stroke(50);
-    line(width - width * 0.056, 0, width - width * 0.056, height / 2);
+  } else if (posicion === 'derechaSup') { //listo
+    noStroke();
+    fill(70);
+    quad(width, height / 2,
+    width, -1,
+    width - width / 8.8, height / 11.5,
+    width - width / 8.8, height / 2);
 
-  } else if (posicion === 'derechaInf') {
-    stroke(50);
-    line(width - width * 0.943, height / 2.01, width - width * 0.943, height);
+  } else if (posicion === 'derechaInf') { //listo
+    noStroke();
+    fill(70);
+    quad(width - width / 8.8, height / 2.01,
+    width - width / 8.8, height - height / 11.5,
+    width, height+1,
+    width, height / 2.01);
 
-  } else if (posicion === 'izquierdaSup') {
-    stroke(50);
-    line(width - width * 0.943, 0, width - width * 0.943, height / 2);
+  } else if (posicion === 'izquierdaSup') { //listo
+    noStroke();
+    fill(30);
+    quad(0, -1,
+    0, height / 2,
+    width / 8.8, height / 2,
+    width / 8.8, height / 11.5);
 
-  } else if (posicion === 'izquierdaInf') {
-    stroke(50);
-    line(width - width * 0.056, height / 2.01, width - width * 0.056, height);
+  } else if (posicion === 'izquierdaInf') { //listo
+    noStroke();
+    fill(30);
+    quad(width / 8.8, height - height / 11.5,
+    width / 8.8, height / 2.01,
+    0, height / 2.01,
+    0, height+1);
   
   }
 }
 
 function circulo(posicion) { //semicirculos terminados
   if (posicion === 'arribaDer') {
-    stroke(colorCirculo);
+    stroke(150);
     noFill();
     arc(width / 2, 0, width * 0.885, height * 0.885, -PI / 2, PI / 2);
 
   } else if (posicion === 'arribaIzq') {
-    stroke(colorCirculo);
+    stroke(150);
     noFill();
     arc(width / 2, 0, width * 0.885, height * 0.885, PI / 2.1, -PI / 2);
 
   } else if (posicion === 'abajoDer') {
-    stroke(colorCirculo);
+    stroke(150);
     noFill();
     arc(width / 2, height, width * 0.885, height * 0.885, -PI/2, PI / 2);
 
   } else if (posicion === 'abajoIzq') {
-    stroke(colorCirculo);
+    stroke(150);
     noFill();
     arc(width/2, height, width * 0.885, height * 0.885, PI / 2, -PI / 2.1);
 
