@@ -8,16 +8,10 @@ function draw() {
 
   rectangulo('arriba'); //linea que está a mitad del circulo de arriba
   circulo('arriba');
-  rectangulo('derecha');
-  rectangulo('izquierda');
+  rectangulo('derecha'); //linea a la derecha
+  rectangulo('izquierda'); //linea a la izquierda
   
   circulo('abajo');
   rectangulo('abajo'); //linea que está a mitad del circulo de abajo
 
 }
-
-/*function dibujarLineasLaterales() {
-  stroke(25);
-  line(57, 0, 57, width); //Linea Izquierda
-  line(height - 57, 0, height - 57, width); //Linea Derecha
-}*/
