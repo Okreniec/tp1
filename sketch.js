@@ -11,18 +11,17 @@ function draw() {
   rectangulo('arribaIzq'); //linea que está a mitad del circulo de arriba izquierda
   rectangulo('arribaDer');
 
-  circulo('arribaIzq');
-
   rectangulo('derechaSup'); //linea a la derecha Arriba
   
   circulo('abajoIzq');
-  
+
   rectangulo('derechaInf'); //linea a la derecha Arriba
   rectangulo('abajoDer');
   rectangulo('abajoIzq');
   rectangulo('izquierdaSup'); //linea a la izquierda Arriba
   rectangulo('izquierdaInf'); //linea a la izquierda Abajo
-  
+
+  circulo('arribaIzq');
   circulo('abajoDer');
 
 }
