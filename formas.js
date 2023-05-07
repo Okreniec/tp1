@@ -1,12 +1,12 @@
-function rectangulo(posicion) {
+function rectangulo(posicion) { //Rectangulos terminados
   strokeWeight(width/8.7); //anchura de las líneas
   strokeCap(SQUARE); //puntas de las líneas (cuadradas)
 
-  if (posicion === 'arribaIzq') { //listo
+  if (posicion === 'arribaIzq') {
     stroke(50);
     line(width - width * 0.99, 0 + height * 0.03, width / 2, 0 + height * 0.03);
 
-  }  else if (posicion === 'arribaDer'){ //listo
+  }  else if (posicion === 'arribaDer'){
     stroke(50);
     line(width / 2.01, 0 + height * 0.03, width - 7, 0 + height * 0.03);
 
@@ -14,24 +14,24 @@ function rectangulo(posicion) {
     stroke(50);
     line(width - width * 0.99, height - height * 0.02, width / 2, height - height * 0.02);
 
-  } else if (posicion === 'abajoDer') { //listo
+  } else if (posicion === 'abajoDer') {
     stroke(50);
     line(width / 2.01, height - height * 0.02, width, height - height * 0.02);
 
-  } else if (posicion === 'derechaSup') { //listo
+  } else if (posicion === 'derechaSup') {
     stroke(50);
     line(width - width * 0.943, 0, width - width * 0.943, height / 2);
 
-  } else if (posicion === 'derechaInf') { //listo
+  } else if (posicion === 'derechaInf') {
     stroke(50);
     line(width - width * 0.943, height / 2.01, width - width * 0.943, height);
 
-  } else if (posicion === 'izquierdaSup') { //listo
+  } else if (posicion === 'izquierdaSup') {
     stroke(50);
     line(width - width * 0.056, 0, width - width * 0.056, height / 2);
 
 
-  } else if (posicion === 'izquierdaInf') { //listo
+  } else if (posicion === 'izquierdaInf') {
     stroke(50);
     line(width - width * 0.056, height / 2.01, width - width * 0.056, height);
   
