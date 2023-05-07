@@ -4,7 +4,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   if (posicion === 'arribaIzq') { //listo
     noStroke();
-    fill(60);
+    fill("#81eaa8");
     quad(0, 0,
     width / 2, 0,
     width / 2, height / 11.4,
@@ -12,7 +12,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   }  else if (posicion === 'arribaDer'){ //listo
     noStroke();
-    fill(60);
+    fill("#b11e31");
     quad(width / 2.01, 0,
     width, 0,
     width - width / 8.8, height / 11.4,
@@ -20,7 +20,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'abajoIzq') { //listo
     noStroke();
-    fill(40);
+    fill("#060411");
     quad(width / 8.8, height - height / 11.4,
     width / 2, height - height / 11.4,
     width / 2, height,
@@ -28,7 +28,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'abajoDer') { //listo
     noStroke();
-    fill(40);
+    fill("#dd98d7");
     quad(width / 2.01, height - height / 11.4,
     width - width / 8.8, height - height / 11.4,
     width, height,
@@ -36,7 +36,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'derechaSup') { //listo
     noStroke();
-    fill(70);
+    fill("#b11e31");
     quad(width, height / 2,
     width, -1,
     width - width / 8.8, height / 11.5,
@@ -44,7 +44,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'derechaInf') { //listo
     noStroke();
-    fill(70);
+    fill("#b11e31");
     quad(width - width / 8.8, height / 2.01,
     width - width / 8.8, height - height / 11.5,
     width, height+1,
@@ -52,7 +52,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'izquierdaSup') { //listo
     noStroke();
-    fill(30);
+    fill("#060411");
     quad(0, -1,
     0, height / 2,
     width / 8.8, height / 2,
@@ -60,7 +60,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'izquierdaInf') { //listo
     noStroke();
-    fill(30);
+    fill("#060411");
     quad(width / 8.8, height - height / 11.5,
     width / 8.8, height / 2.01,
     0, height / 2.01,
@@ -71,24 +71,24 @@ function rectangulo(posicion) { //Rectangulos terminados
 
 function circulo(posicion) { //semicirculos terminados
   if (posicion === 'arribaDer') {
-    stroke(0);
+    stroke("#81eaa8");
     noFill();
     arc(width / 2, 0, width - width / 8.7 , height - height / 8.7, -PI / 2, PI / 2);
 
   } else if (posicion === 'arribaIzq') {
-    stroke(50);
+    stroke("#81eaa8");
     noFill();
     arc(width / 2, 0, width - width / 8.7 , height - height / 8.7, PI / 2.005, -PI / 2);
 
   } else if (posicion === 'abajoDer') {
-    stroke(100);
+    stroke("#dd98d7");
     noFill();
     arc(width / 2, height, width - width / 8.7 , height - height / 8.7, -PI / 2, PI / 2);
 
   } else if (posicion === 'abajoIzq') {
-    stroke(150);
+    stroke("#dd98d7");
     noFill();
-    arc(width / 2, height, width - width / 8.7 , height - height / 8.7, PI / 2, -PI / 2);
+    arc(width / 2, height, width - width / 8.7 , height - height / 8.7, PI / 2, -PI / 2.005);
 
   }
 }
