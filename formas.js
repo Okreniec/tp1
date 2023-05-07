@@ -26,17 +26,21 @@ function rectangulo(posicion) {
 }
 
 function circulo(posicion) {
-  if (posicion === 'arriba') {
-
+  if (posicion === 'arribaDer') {
     stroke(100);
     noFill();
-    ellipse(width / 2, 0, width * 0.885, height * 0.885);
-
-  } else if (posicion === 'abajo') {
-
+    arc(width / 2, 0, width * 0.885, height * 0.885, -PI / 2, PI / 2); 
+  } else if (posicion === 'arribaIzq') {
     stroke(100);
     noFill();
-    ellipse(width / 2, height, width * 0.885, height * 0.885);
-
+    arc(width / 2, 0, width * 0.885, height * 0.885, PI / 2.1, -PI / 2);
+  } else if (posicion === 'abajoDer') {
+    stroke(100);
+    noFill();
+    arc(width / 2, height, width * 0.885, height * 0.885, -PI/2, PI / 2);
+  } else if (posicion === 'abajoIzq') {
+    stroke(100);
+    noFill();
+    arc(width/2, height, width * 0.885, height * 0.885, PI / 2, -PI / 2.1);
   }
 }
