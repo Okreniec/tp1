@@ -1,5 +1,5 @@
 function rectangulo(posicion) {
-  strokeWeight(width/9); //anchura de las líneas
+  strokeWeight(width/8.7); //anchura de las líneas
   strokeCap(SQUARE); //puntas de las líneas (cuadradas)
 
   if (posicion === 'arriba') { // listo
