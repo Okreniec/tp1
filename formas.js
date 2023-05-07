@@ -71,24 +71,24 @@ function rectangulo(posicion) { //Rectangulos terminados
 
 function circulo(posicion) { //semicirculos terminados
   if (posicion === 'arribaDer') {
-    stroke(150);
+    stroke(0);
     noFill();
-    arc(width / 2, 0 - height * 0.007, width - width / 11 , height - height / 10, -PI / 2, PI / 2);
+    arc(width / 2, 0 - height * 0.007, width - width / 11 , height - height / 10, -PI / 2.001, PI / 2);
 
   } else if (posicion === 'arribaIzq') {
-    stroke(150);
+    stroke(50);
     noFill();
-    arc(width / 2, 0 - height * 0.007, width - width / 11 , height - height / 10, PI / 2.1, -PI / 2.1);
+    arc(width / 2, 0 - height * 0.007, width - width / 11 , height - height / 10, PI / 2.01, -PI / 2);
 
   } else if (posicion === 'abajoDer') {
-    stroke(150);
+    stroke(100);
     noFill();
-    arc(width / 2, height + height * 0.007, width - width / 11 , height - height / 10, -PI/2, PI / 2);
+    arc(width / 2, height + height * 0.007, width - width / 11 , height - height / 10, -PI/2.003, PI / 2);
 
   } else if (posicion === 'abajoIzq') {
     stroke(150);
     noFill();
-    arc(width / 2 , height + height * 0.007, width - width / 11 , height - height / 10, PI / 2, -PI / 2.1);
+    arc(width / 2 , height + height * 0.007, width - width / 11 , height - height / 10, PI / 2, -PI / 2.01);
 
   }
 }
