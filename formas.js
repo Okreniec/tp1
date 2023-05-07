@@ -21,10 +21,10 @@ function circulo(posicion) {
   if (posicion === 'arriba') {
     stroke(100);
     noFill();
-    ellipse(width / 2, 0, width, height);
+    ellipse(width / 2, 0, width* 0.885, height* 0.885);
   } else if (posicion === 'abajo') {
     stroke(100);
     noFill();
-    ellipse(width / 2, height, width, height);
+    ellipse(width / 2, height, width * 0.885, height* 0.885);
   }
 }
