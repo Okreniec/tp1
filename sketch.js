@@ -8,6 +8,12 @@ function draw() {
 
   circulo('arribaDer');
 
+  /*blendMode(DIFFERENCE);
+  fill(255,0,0);
+  noStroke();
+  ellipse(width,0,width,height);
+  blendMode(BLEND);*/
+
   rectangulo('arribaIzq'); //linea que está a mitad del circulo de arriba izquierda
   rectangulo('arribaDer');
 

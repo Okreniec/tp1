@@ -20,7 +20,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'derechaSup') {
     stroke(50);
-    line(width - width * 0.943, 0, width - width * 0.943, height / 2);
+    line(width - width * 0.056, 0, width - width * 0.056, height / 2);
 
   } else if (posicion === 'derechaInf') {
     stroke(50);
@@ -28,8 +28,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'izquierdaSup') {
     stroke(50);
-    line(width - width * 0.056, 0, width - width * 0.056, height / 2);
-
+    line(width - width * 0.943, 0, width - width * 0.943, height / 2);
 
   } else if (posicion === 'izquierdaInf') {
     stroke(50);
