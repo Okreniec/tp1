@@ -1,6 +1,9 @@
+let colorCirculo = '#81f3ae', '#e9b104', '#148cc9', '#53bfe3', '#', '#d01d81', '#eae941', '#ec7147', '#', '#', '#', '#', '#';
+let coloresMedios = '#ab0da2', '#b2284c', '#d650b1', '#6a4cec', '#99060e', '#', '#', '#';
+let coloresOscuros = '#014189', '#0a712c', '#', '#', '#', '#', '#', '#';
+
 function setup() {
   createCanvas(windowHeight, windowHeight);
-
 }
 
 function draw() {

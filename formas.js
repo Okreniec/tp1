@@ -3,7 +3,7 @@ function rectangulo(posicion) { //Rectangulos terminados
   strokeCap(SQUARE); //puntas de las líneas (cuadradas)
 
   if (posicion === 'arribaIzq') {
-    stroke(50);
+    stroke(colorCirculo);
     line(width - width * 0.99, 0 + height * 0.03, width / 2, 0 + height * 0.03);
 
   }  else if (posicion === 'arribaDer'){
@@ -15,7 +15,7 @@ function rectangulo(posicion) { //Rectangulos terminados
     line(width - width * 0.99, height - height * 0.02, width / 2, height - height * 0.02);
 
   } else if (posicion === 'abajoDer') {
-    stroke(50);
+    stroke(colorCirculo);
     line(width / 2.01, height - height * 0.02, width, height - height * 0.02);
 
   } else if (posicion === 'derechaSup') {
@@ -39,22 +39,22 @@ function rectangulo(posicion) { //Rectangulos terminados
 
 function circulo(posicion) { //semicirculos terminados
   if (posicion === 'arribaDer') {
-    stroke(100);
+    stroke(colorCirculo);
     noFill();
     arc(width / 2, 0, width * 0.885, height * 0.885, -PI / 2, PI / 2);
 
   } else if (posicion === 'arribaIzq') {
-    stroke(100);
+    stroke(colorCirculo);
     noFill();
     arc(width / 2, 0, width * 0.885, height * 0.885, PI / 2.1, -PI / 2);
 
   } else if (posicion === 'abajoDer') {
-    stroke(100);
+    stroke(colorCirculo);
     noFill();
     arc(width / 2, height, width * 0.885, height * 0.885, -PI/2, PI / 2);
 
   } else if (posicion === 'abajoIzq') {
-    stroke(100);
+    stroke(colorCirculo);
     noFill();
     arc(width/2, height, width * 0.885, height * 0.885, PI / 2, -PI / 2.1);
 
