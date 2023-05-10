@@ -9,7 +9,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   if (posicion === 'arribaIzq') { //listo
     noStroke();
-    fill("#81eaa8");
+    fill(color0);
     quad(0, 0,
     width / 2, 0,
     width / 2, height / AnchoLineas,
@@ -17,7 +17,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   }  else if (posicion === 'arribaDer'){ //listo
     noStroke();
-    fill("#b11e31");
+    fill(color2);
     quad(width / 2.01, 0,
     width, 0,
     width - width / AnchoLineas, height / AnchoLineas,
@@ -25,7 +25,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'abajoIzq') { //listo
     noStroke();
-    fill("#060411");
+    fill(color4);
     quad(width / AnchoLineas, height - height / AnchoLineas,
     width / 2, height - height / AnchoLineas,
     width / 2, height,
@@ -33,7 +33,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'abajoDer') { //listo
     noStroke();
-    fill("#dd98d7");
+    fill(color1);
     quad(width / 2.01, height - height / AnchoLineas,
     width - width / AnchoLineas, height - height / AnchoLineas,
     width, height,
@@ -41,7 +41,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'derechaSup') { //listo
     noStroke();
-    fill("#b11e31");
+    fill(color2);
     quad(width, height / 2,
     width, -1,
     width - width / AnchoLineas, height / AnchoLineas-1,
@@ -49,7 +49,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'derechaInf') { //listo
     noStroke();
-    fill("#b11e31");
+    fill(color2);
     quad(width - width / AnchoLineas, height / 2.01,
     width - width / AnchoLineas, height - height / AnchoLineas+1,
     width, height+1,
@@ -57,7 +57,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'izquierdaSup') { //listo
     noStroke();
-    fill("#060411");
+    fill(color4);
     quad(0, -1,
     0, height / 2,
     width / AnchoLineas, height / 2,
@@ -65,7 +65,7 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   } else if (posicion === 'izquierdaInf') { //listo
     noStroke();
-    fill("#060411");
+    fill(color4);
     quad(width / AnchoLineas, height - height / AnchoLineas+1,
     width / AnchoLineas, height / 2.01,
     0, height / 2.01,
@@ -81,49 +81,49 @@ function circulo(posicion) { //semicirculos terminados
   strokeWeight(width/Ancho);
 
   if (posicion === 'arribaDer') {
-    stroke("#81eaa8");
+    stroke(color0);
     noFill();
     arc(width / 2, 0, width - width / Ancho , height - height / Ancho, -PI / 2, PI / 2);
 
   } else if (posicion === 'arribaIzq') {
-    stroke("#81eaa8");
+    stroke(color0);
     noFill();
     arc(width / 2, 0, width - width / Ancho , height - height / Ancho, PI / 2.005, -PI / 2);
 
   } else if (posicion === 'abajoDer') {
-    stroke("#dd98d7");
+    stroke(color1);
     noFill();
     arc(width / 2, height, width - width / Ancho , height - height / Ancho, -PI / 2, PI / 2);
 
   } else if (posicion === 'abajoIzq') {
-    stroke("#dd98d7");
+    stroke(color1);
     noFill();
     arc(width / 2, height, width - width / Ancho , height - height / Ancho, PI / 2, -PI / 2.005);
 
   } else if (posicion === 'bordeSupDer') {
     blendMode(DIFFERENCE);
-    stroke("#b11e31");
+    stroke(color3);
     noFill();
     arc(0, 0, width - width / Ancho , height - height / Ancho, -PI / 2, PI / 2);
     blendMode(BLEND);
 
   } else if (posicion === 'bordeSupIzq') {
     blendMode(DIFFERENCE);
-    stroke("#b11e31");
+    stroke(color3);
     noFill();
     arc(width, 0, width - width / Ancho , height - height / Ancho, PI / 2, -PI / 2);
     blendMode(BLEND);
 
   } else if (posicion === 'bordeInfDer') {
     blendMode(DIFFERENCE);
-    stroke("#b11e31");
+    stroke(color3);
     noFill();
     arc(width, height, width - width / Ancho , height - height / Ancho, PI / 2, -PI / 2);
     blendMode(BLEND);
 
   } else if (posicion === 'bordeInfIzq') {
     blendMode(DIFFERENCE);
-    stroke("#b11e31");
+    stroke(color3);
     noFill();
     arc(0, height, width - width / Ancho , height - height / Ancho, -PI / 2, PI / 2);
     blendMode(BLEND);
