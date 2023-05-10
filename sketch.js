@@ -48,11 +48,4 @@ function draw() {
   circulo('bordeSupIzq');
   circulo('bordeInfIzq');
   circulo('bordeInfDer');
-  
-}
-
-function mouseMoved() {
-  // Actualizar el tiempo y la posición del mouse
-  lastTimestamp = millis();
-  lastMouseY = mouseY;
 }
