@@ -5,6 +5,9 @@ let colores3 = ["#ffbf00", "#00aedb", "#81eaa8", "#dd98d7", "#b11e31"];
 let colores4 = ["#00aedb", "#81eaa8", "#dd98d7", "#b11e31", "#ffbf00", "#060411"];
 //let colores5 = ["#0a9777", "#5450bf", "#0998c0", "#03476a"];
 
+let opacidad=150;
+
+
 function setup() {
   createCanvas(windowHeight, windowHeight);
 }
@@ -12,11 +15,11 @@ function setup() {
 function draw() {
  
   indexColor = floor(map(mouseY, 0, height, 0, colores.length));
-  color0 = colores[indexColor];
-  color1 = colores1[indexColor];
-  color2 = colores2[indexColor];
-  color3 = colores3[indexColor];
-  color4 = colores4[indexColor];
+  color0 = color(colores[indexColor] + hex(opacidad, 2));
+  color1 = color(colores[indexColor] + hex(opacidad, 2));
+  color2 = color(colores[indexColor] + hex(opacidad, 2));
+  color3 = color(colores[indexColor] + hex(opacidad, 2));
+  color4 = color(colores[indexColor] + hex(opacidad, 2));
   //color5 = colores5[indexColor];
 
   background('#0a9777');
