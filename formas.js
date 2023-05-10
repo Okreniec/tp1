@@ -3,8 +3,6 @@ let AnchoLineas;
 
 function rectangulo(posicion) { //Rectangulos terminados
 
-  Ancho = map(mouseX, 0, width, 13, 11);
-
   AnchoLineas = map(mouseX, 0, width, 15, 12.6);
 
   strokeCap(SQUARE); //puntas de las líneas (cuadradas)
@@ -77,6 +75,8 @@ function rectangulo(posicion) { //Rectangulos terminados
 }
 
 function circulo(posicion) { //semicirculos terminados
+
+  Ancho = map(mouseX, 0, width, 13, 11);
 
   strokeWeight(width/Ancho);
 

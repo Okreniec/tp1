@@ -9,12 +9,6 @@ function draw() {
 
   rectangulo('derechaSup'); //linea a la derecha Arriba
 
-  /*blendMode(DIFFERENCE);
-  fill("#5dc2f8");
-  noStroke();                                   //Esto es una prueba nomás.
-  ellipse(width,0,width,height);
-  blendMode(BLEND);*/
-  
   rectangulo('arribaIzq'); //linea que está a mitad del circulo de arriba izquierda
   
   circulo('abajoIzq');
