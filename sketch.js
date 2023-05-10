@@ -9,11 +9,11 @@ function draw() {
 
   rectangulo('derechaSup'); //linea a la derecha Arriba
 
-  blendMode(DIFFERENCE);
+  /*blendMode(DIFFERENCE);
   fill("#5dc2f8");
   noStroke();                                   //Esto es una prueba nomás.
   ellipse(width,0,width,height);
-  blendMode(BLEND);
+  blendMode(BLEND);*/
   
   rectangulo('arribaIzq'); //linea que está a mitad del circulo de arriba izquierda
   
@@ -31,4 +31,9 @@ function draw() {
 
   
   circulo('abajoDer');
+
+  circulo('bordeSupDer');
+  circulo('bordeSupIzq');
+  circulo('bordeInfIzq');
+  circulo('bordeInfDer');
 }

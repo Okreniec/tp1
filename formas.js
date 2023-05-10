@@ -7,7 +7,6 @@ function rectangulo(posicion) { //Rectangulos terminados
 
   AnchoLineas = map(mouseX, 0, width, 15, 12.6);
 
-  strokeWeight(width/Ancho);
   strokeCap(SQUARE); //puntas de las líneas (cuadradas)
 
   if (posicion === 'arribaIzq') { //listo
@@ -47,14 +46,14 @@ function rectangulo(posicion) { //Rectangulos terminados
     fill("#b11e31");
     quad(width, height / 2,
     width, -1,
-    width - width / AnchoLineas, height / AnchoLineas,
+    width - width / AnchoLineas, height / AnchoLineas-1,
     width - width / AnchoLineas, height / 2);
 
   } else if (posicion === 'derechaInf') { //listo
     noStroke();
     fill("#b11e31");
     quad(width - width / AnchoLineas, height / 2.01,
-    width - width / AnchoLineas, height - height / AnchoLineas,
+    width - width / AnchoLineas, height - height / AnchoLineas+1,
     width, height+1,
     width, height / 2.01);
 
@@ -64,12 +63,12 @@ function rectangulo(posicion) { //Rectangulos terminados
     quad(0, -1,
     0, height / 2,
     width / AnchoLineas, height / 2,
-    width / AnchoLineas, height / AnchoLineas);
+    width / AnchoLineas, height / AnchoLineas-1);
 
   } else if (posicion === 'izquierdaInf') { //listo
     noStroke();
     fill("#060411");
-    quad(width / AnchoLineas, height - height / AnchoLineas,
+    quad(width / AnchoLineas, height - height / AnchoLineas+1,
     width / AnchoLineas, height / 2.01,
     0, height / 2.01,
     0, height+1);
@@ -78,6 +77,9 @@ function rectangulo(posicion) { //Rectangulos terminados
 }
 
 function circulo(posicion) { //semicirculos terminados
+
+  strokeWeight(width/Ancho);
+
   if (posicion === 'arribaDer') {
     stroke("#81eaa8");
     noFill();
@@ -97,6 +99,34 @@ function circulo(posicion) { //semicirculos terminados
     stroke("#dd98d7");
     noFill();
     arc(width / 2, height, width - width / Ancho , height - height / Ancho, PI / 2, -PI / 2.005);
+
+  } else if (posicion === 'bordeSupDer') {
+    blendMode(DIFFERENCE);
+    stroke("#b11e31");
+    noFill();
+    arc(0, 0, width - width / Ancho , height - height / Ancho, -PI / 2, PI / 2);
+    blendMode(BLEND);
+
+  } else if (posicion === 'bordeSupIzq') {
+    blendMode(DIFFERENCE);
+    stroke("#b11e31");
+    noFill();
+    arc(width, 0, width - width / Ancho , height - height / Ancho, PI / 2, -PI / 2);
+    blendMode(BLEND);
+
+  } else if (posicion === 'bordeInfDer') {
+    blendMode(DIFFERENCE);
+    stroke("#b11e31");
+    noFill();
+    arc(width, height, width - width / Ancho , height - height / Ancho, PI / 2, -PI / 2);
+    blendMode(BLEND);
+
+  } else if (posicion === 'bordeInfIzq') {
+    blendMode(DIFFERENCE);
+    stroke("#b11e31");
+    noFill();
+    arc(0, height, width - width / Ancho , height - height / Ancho, -PI / 2, PI / 2);
+    blendMode(BLEND);
 
   }
 }
