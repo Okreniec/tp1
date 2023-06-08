@@ -5,6 +5,9 @@ let colores3 = ["#ffbf00", "#00aedb", "#81eaa8", "#dd98d7", "#b11e31"];
 let colores4 = ["#00aedb", "#81eaa8", "#dd98d7", "#b11e31", "#ffbf00", "#060411"];
 //let colores5 = ["#0a9777", "#5450bf", "#0998c0", "#03476a"];
 
+let shapes = [];
+let speedThreshold = 2;
+
 let prevX, prevY;
 let prevTime;
 let speed;
@@ -61,7 +64,7 @@ function draw() {
     fill(colores2);
     noStroke();
     blendMode(DIFFERENCE);
-    circle(width / 2, height / 2, width / 12 + width / AnchoLineas, height / 5 + width / AnchoLineas);
+    circle(width / 2, height / 2, width / 12 + width / AnchoLineas, height / 12 + height / AnchoLineas);
     blendMode(BLEND);
   }
 }
@@ -81,6 +84,6 @@ function Velocidad() {
   prevTime = currentTime;
 
   if (speed >= 1 && speed <= 2) {
-    drawCircle = true; // Activar el dibujado del círculo
+    drawCircle = true;
   }
 }
