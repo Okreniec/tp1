@@ -11,7 +11,7 @@ let speedThreshold = 2;
 let prevX, prevY;
 let prevTime;
 let speed;
-let drawCircle = false;
+let dibujarCirculo = false;
 
 function setup() {
   createCanvas(windowHeight, windowHeight);
@@ -33,6 +33,15 @@ function draw() {
   //color5 = colores5[indexColor];
 
   background('#0a9777');
+  
+  triangle(0, 0, 0, height/2, width/2, height/2); //Arriba derecha inf
+  triangle(0, 0, width/2, 0, width/2, height/2); //Arriba derecha sup
+  triangle(width/2, 0, width, 0, width/2, height/2); //Arriba izquierda sup
+  triangle(width, 0, width, height/2, width/2, height/2); //Arriba izquierda inf
+  triangle();
+  triangle();
+  triangle();
+  triangle();
 
   circulo('arribaDer');
 
@@ -51,7 +60,6 @@ function draw() {
 
   rectangulo('izquierdaInf'); //linea a la izquierda Abajo
   rectangulo('derechaInf'); //linea a la derecha Arriba
-
   
   circulo('abajoDer');
 
@@ -60,13 +68,14 @@ function draw() {
   circulo('bordeInfIzq');
   circulo('bordeInfDer');
 
-  if (drawCircle) {
+  if (dibujarCirculo) {
     fill(colores2);
     noStroke();
     blendMode(DIFFERENCE);
     circle(width / 2, height / 2, width / 12 + width / AnchoLineas, height / 12 + height / AnchoLineas);
     blendMode(BLEND);
   }
+
 }
 
 function Velocidad() {
@@ -84,6 +93,6 @@ function Velocidad() {
   prevTime = currentTime;
 
   if (speed >= 1 && speed <= 2) {
-    drawCircle = true;
+    dibujarCirculo = true;
   }
 }
