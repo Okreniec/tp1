@@ -23,6 +23,12 @@ let dibujarTriangulo5 = false;
 let dibujarTriangulo6 = false;
 let dibujarTriangulo7 = false;
 
+let textura;
+
+/*function preload() {
+  textura = loadImage('data/textura.jpg');
+}*/
+
 function setup() {
   createCanvas(windowHeight, windowHeight);
   prevX = mouseX;
@@ -79,6 +85,7 @@ function draw() {
   rectangulo('izquierdaInf'); //linea a la izquierda Abajo
   rectangulo('arribaIzq'); //linea que está a mitad del circulo de arriba izquierda
 
+  /*texture(textura);*/
   circulo('bordeInfIzq'); 
 }
 
