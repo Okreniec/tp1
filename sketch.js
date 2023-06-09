@@ -11,7 +11,17 @@ let speedThreshold = 2;
 let prevX, prevY;
 let prevTime;
 let speed;
+
 let dibujarCirculo = false;
+
+let dibujarTriangulo0 = false;
+let dibujarTriangulo1 = false;
+let dibujarTriangulo2 = false;
+let dibujarTriangulo3 = false;
+let dibujarTriangulo4 = false;
+let dibujarTriangulo5 = false;
+let dibujarTriangulo6 = false;
+let dibujarTriangulo7 = false;
 
 function setup() {
   createCanvas(windowHeight, windowHeight);
@@ -33,16 +43,10 @@ function draw() {
   //color5 = colores5[indexColor];
 
   background('#0a9777');
-  
-  triangle(0, 0, 0, height/2, width/2, height/2); //Arriba izq inf
-  triangle(0, 0, width/2, 0, width/2, height/2); //Arriba izq sup
-  triangle(width/2, 0, width, 0, width/2, height/2); //Arriba der sup
-  triangle(width, 0, width, height/2, width/2, height/2); //Arriba der inf
-  triangle(0, height, 0, height/2, width/2, height/2); //Abajo izq sup
-  triangle(0, height, width/2, height, width/2, height/2); //Abajo izq inf
-  triangle(width/2, height, width, height, width/2, height/2); //Abajo der inf
-  triangle(width, height, width, height/2, width/2, height/2);  //Abajo der sup
 
+  condicionales('trianguloAbajoIzqInf'); //Abajo izq inf
+  condicionales('trianguloArribaDerSup'); //Arriba der sup
+  
   circulo('arribaDer');
 
   rectangulo('derechaSup'); //linea a la derecha Arriba
@@ -53,29 +57,34 @@ function draw() {
 
   rectangulo('abajoIzq');
   rectangulo('abajoDer');
+
+  condicionales('trianguloAbajoDerSup'); //Abajo der sup
+
   rectangulo('izquierdaSup'); //linea a la izquierda Arriba
   rectangulo('arribaDer');
   
   circulo('arribaIzq');
+
+  condicionales('trianguloAbajoDerInf'); //Abajo der inf
 
   rectangulo('izquierdaInf'); //linea a la izquierda Abajo
   rectangulo('derechaInf'); //linea a la derecha Arriba
   
   circulo('abajoDer');
 
+  condicionales('trianguloArribaIzqSup'); //Arriba izq sup
+
   circulo('bordeSupDer');
   circulo('bordeSupIzq');
   circulo('bordeInfIzq');
   circulo('bordeInfDer');
 
-  if (dibujarCirculo) {
-    fill(colores2);
-    noStroke();
-    blendMode(DIFFERENCE);
-    circle(width / 2, height / 2, width / 12 + width / AnchoLineas, height / 12 + height / AnchoLineas);
-    blendMode(BLEND);
-  }
+  condicionales('trianguloArribaIzqInf'); //Arriba izq inf
 
+  condicionales('circuloMedio');
+
+  condicionales('trianguloAbajoIzqSup'); //Abajo izq sup
+  condicionales('trianguloArribaDerInf');  //Arriba der inf
 }
 
 function Velocidad() {
@@ -91,8 +100,4 @@ function Velocidad() {
   prevX = mouseX;
   prevY = mouseY;
   prevTime = currentTime;
-
-  if (speed >= 1 && speed <= 2) {
-    dibujarCirculo = true;
-  }
 }
