@@ -1,7 +1,7 @@
 let colores = ["#81eaa8", "#dd98d7", "#b11e31", "#ffbf00", "#00aedb"];
 let colores1 = [ "#dd98d7", "#b11e31", "#ffbf00", "#00aedb", "#81eaa8"];
 let colores2 = ["#b11e31", "#ffbf00", "#00aedb", "#81eaa8", "#dd98d7"];
-let colores3 = ["#ffbf00", "#00aedb", "#81eaa8", "#dd98d7", "#b11e31"];
+let colores3 = ["#ffbf00", "#00aedb", "#81eaa8", "#dd98d7", "#DA283F"];
 let colores4 = ["#00aedb", "#81eaa8", "#dd98d7", "#b11e31", "#ffbf00", "#060411"];
 //let colores5 = ["#0a9777", "#5450bf", "#0998c0", "#03476a"];
 
@@ -44,47 +44,42 @@ function draw() {
 
   background('#0a9777');
 
-  condicionales('trianguloAbajoIzqInf'); //Abajo izq inf
-  condicionales('trianguloArribaDerSup'); //Arriba der sup
-  
   circulo('arribaDer');
 
   rectangulo('derechaSup'); //linea a la derecha Arriba
-
-  rectangulo('arribaIzq'); //linea que está a mitad del circulo de arriba izquierda
   
   circulo('abajoIzq');
-
-  rectangulo('abajoIzq');
+  
   rectangulo('abajoDer');
-
-  condicionales('trianguloAbajoDerSup'); //Abajo der sup
-
-  rectangulo('izquierdaSup'); //linea a la izquierda Arriba
   rectangulo('arribaDer');
   
   circulo('arribaIzq');
-
-  condicionales('trianguloAbajoDerInf'); //Abajo der inf
-
-  rectangulo('izquierdaInf'); //linea a la izquierda Abajo
+  
   rectangulo('derechaInf'); //linea a la derecha Arriba
   
   circulo('abajoDer');
-
-  condicionales('trianguloArribaIzqSup'); //Arriba izq sup
-
   circulo('bordeSupDer');
   circulo('bordeSupIzq');
-  circulo('bordeInfIzq');
   circulo('bordeInfDer');
 
-  condicionales('trianguloArribaIzqInf'); //Arriba izq inf
+  condicionales('trianguloArribaIzqSup'); //Arriba izq sup
+  condicionales('trianguloArribaDerSup'); //Arriba der sup
 
   condicionales('circuloMedio');
 
+  condicionales('trianguloArribaIzqInf'); //Arriba izq inf
   condicionales('trianguloAbajoIzqSup'); //Abajo izq sup
-  condicionales('trianguloArribaDerInf');  //Arriba der inf
+  condicionales('trianguloArribaDerInf'); //Arriba der inf
+  condicionales('trianguloAbajoDerInf'); //Abajo der inf
+  condicionales('trianguloAbajoDerSup'); //Abajo der sup
+  condicionales('trianguloAbajoIzqInf'); //Abajo izq inf
+
+  rectangulo('abajoIzq');
+  rectangulo('izquierdaSup'); //linea a la izquierda Arriba
+  rectangulo('izquierdaInf'); //linea a la izquierda Abajo
+  rectangulo('arribaIzq'); //linea que está a mitad del circulo de arriba izquierda
+
+  circulo('bordeInfIzq'); 
 }
 
 function Velocidad() {

@@ -122,12 +122,9 @@ function circulo(posicion) { //semicirculos terminados
     blendMode(BLEND);
 
   } else if (posicion === 'bordeInfIzq') {
-    blendMode(DIFFERENCE);
     stroke(color3);
     noFill();
     arc(0, height, width - width / Ancho , height - height / Ancho, -PI / 2, PI / 2);
-    blendMode(BLEND);
-
   }
 }
 
@@ -160,7 +157,7 @@ function condicionales(posicion) {
     }
   } else if (posicion === 'trianguloArribaIzqInf'){ //Arriba izq inf
     if (dibujarTriangulo0) {
-      fill(200);
+      fill(127.5, 50);
       noStroke();
       blendMode(DIFFERENCE);
       triangle(0, 0, 0, height/2, width/2, height/2);
@@ -168,7 +165,7 @@ function condicionales(posicion) {
     }
   } else if (posicion === 'trianguloArribaIzqSup'){ //Arriba izq sup
     if (dibujarTriangulo1) {
-      fill(180);
+      fill(63.75, 50);
       noStroke();
       blendMode(DIFFERENCE);
       triangle(0, 0, width/2, 0, width/2, height/2);
@@ -176,7 +173,7 @@ function condicionales(posicion) {
     }
   } else if (posicion === 'trianguloArribaDerSup'){ //Arriba der sup
     if (dibujarTriangulo2) {
-      fill(180);
+      fill(63.75, 50);
       noStroke();
       blendMode(DIFFERENCE);
       triangle(width/2, 0, width, 0, width/2, height/2);
@@ -184,7 +181,7 @@ function condicionales(posicion) {
     }
   } else if (posicion === 'trianguloArribaDerInf'){ //Arriba der inf
     if (dibujarTriangulo3) {
-      fill(220);
+      fill(191.25, 50);
       noStroke();
       blendMode(DIFFERENCE);
       triangle(width, 0, width, height/2, width/2, height/2);
@@ -192,7 +189,7 @@ function condicionales(posicion) {
     }
   } else if (posicion === 'trianguloAbajoIzqSup'){ //Abajo izq sup
     if (dibujarTriangulo4) {
-      fill(200);
+      fill(127.5, 50);
       noStroke();
       blendMode(DIFFERENCE);
       triangle(0, height, 0, height/2, width/2, height/2);
@@ -200,7 +197,7 @@ function condicionales(posicion) {
     }
   } else if (posicion === 'trianguloAbajoIzqInf'){ //Abajo izq inf
     if (dibujarTriangulo5) {
-      fill(240);
+      fill(255, 50);
       noStroke();
       blendMode(DIFFERENCE);
       triangle(0, height, width/2, height, width/2, height/2);
@@ -208,7 +205,7 @@ function condicionales(posicion) {
     }
   } else if (posicion === 'trianguloAbajoDerInf'){ //Abajo der inf
     if (dibujarTriangulo6) {
-      fill(240);
+      fill(255, 50);
       noStroke();
       blendMode(DIFFERENCE);
       triangle(width/2, height, width, height, width/2, height/2);
@@ -216,7 +213,7 @@ function condicionales(posicion) {
     }
   } else if (posicion === 'trianguloAbajoDerSup'){ //Abajo der sup
     if (dibujarTriangulo7) {
-      fill(220);
+      fill(191.25, 50);
       noStroke();
       blendMode(DIFFERENCE);
       triangle(width, height, width, height/2, width/2, height/2);
