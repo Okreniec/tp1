@@ -34,14 +34,14 @@ function draw() {
 
   background('#0a9777');
   
-  triangle(0, 0, 0, height/2, width/2, height/2); //Arriba derecha inf
-  triangle(0, 0, width/2, 0, width/2, height/2); //Arriba derecha sup
-  triangle(width/2, 0, width, 0, width/2, height/2); //Arriba izquierda sup
-  triangle(width, 0, width, height/2, width/2, height/2); //Arriba izquierda inf
-  triangle();
-  triangle();
-  triangle();
-  triangle();
+  triangle(0, 0, 0, height/2, width/2, height/2); //Arriba izq inf
+  triangle(0, 0, width/2, 0, width/2, height/2); //Arriba izq sup
+  triangle(width/2, 0, width, 0, width/2, height/2); //Arriba der sup
+  triangle(width, 0, width, height/2, width/2, height/2); //Arriba der inf
+  triangle(0, height, 0, height/2, width/2, height/2); //Abajo izq sup
+  triangle(0, height, width/2, height, width/2, height/2); //Abajo izq inf
+  triangle(width/2, height, width, height, width/2, height/2); //Abajo der inf
+  triangle(width, height, width, height/2, width/2, height/2);  //Abajo der sup
 
   circulo('arribaDer');
 
